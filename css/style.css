@@ -1,0 +1,495 @@
+body {
+    display: grid;
+    place-items: center;
+    /* background-color: #d7ccd9; */
+    
+    color: #000000;
+    font-family: 'Verdana';
+    
+    }
+
+    
+    text{
+        font-family: 'Verdana';
+    }
+    .destination-buttons {
+        display: none;
+    }
+
+    #randomFactButton {
+        display: none;
+      }
+
+    
+    
+    #skip {
+    position: absolute;
+    top: -40px;
+    left: -40px; 
+    font-family: 'Chalkduster';  
+    }
+
+    .nav-icon {
+        display: none; 
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+      
+      #myBtn:hover {
+        background-color: black;
+      }
+    
+    nav {
+    background-color: #b387cf;
+    font-size: 18px;
+    text-align: center;
+    grid-column: 1 / -1;
+    width: 100%;
+   
+    }
+    nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    }
+    nav li {
+    display: inline-block;
+    }
+    
+    nav a.active {
+    
+    
+    text-decoration: overline;
+    }
+    a:hover {
+    color: hsl(210, 62%, 34%);
+    }
+    .gallery {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    }
+    h1 {
+    font-size: 50px;
+    color: #2368a7;
+    text-align: center;
+    font-family: 'Chalkduster';
+    padding-bottom: 20px;
+    }
+    
+    
+    h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #634eb0;
+    text-align: center;
+    width: 100%;
+    font-family: 'Chalkduster';
+    }
+    
+    
+    h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2368a7;
+    width: 100%;
+    font-family: 'Chalkduster';
+    }
+    
+    p {
+    line-height: 1.8;
+    grid-column: 1 / -1;
+    }
+    
+    
+    ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+    justify-content: center;
+    }
+    li {
+    color: #2c3e50;
+    padding: 5px;
+    text-align: center;
+    }
+    
+    
+    img {
+    border: 5px solid #5b5189;
+    border-radius: 30px;
+    display: inline-block;
+    }
+    
+    
+    nav a {
+    padding: 5px;
+    text-decoration: none;
+    color: #072645;
+    font-family: 'Gluten';
+    }
+    .largeimages {
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    }
+    .largeimages img {
+    width: 100%;
+    height: 100%;
+    animation: fadeInScale 1s ease-in-out;
+    grid-column: 1 / -1;
+    }
+    .grid-container img {
+    display:grid;
+    width: 300px;
+    height: 200px;
+    grid-template-columns: 1fr 1fr;
+    }
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .gallery {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    }
+    @media (prefers-reduced-motion: reduce) {
+    img[src$=".gif"] {
+    display: none;
+    }
+    .largeimages img {
+    animation: none;
+    height:0 auto;
+    
+    
+    }
+    }
+    
+    
+    @keyframes fadeInScale {
+    0% {
+    opacity: 0;
+    transform: scale(0.5);
+    }
+    100% {
+    opacity: 1;
+    transform: scale(1);
+    }
+    }
+    .grid-container figcaption {
+    text-align: center;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1081px) {
+        #skip:focus {
+            top: 10px; 
+            left: 10px; 
+          visibility: visible;
+        }
+
+        #randomFactButton {
+            display: none;
+          }
+
+        #myBtn {
+            display: block; 
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 10px;
+            max-width: 100%;
+            height: auto;    
+        }
+        .largeimages {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden; 
+            margin: auto;
+        }
+        
+        .largeimages img {
+            width: 45%;
+            height: 200px;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+          }
+          
+          .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border: 5px solid #5b5189;
+            border-radius: 30px;
+          }
+          .destination-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+    
+        .destination-buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #b387cf;
+            border: none;
+            border-radius: 5px;
+        }
+    
+        .destination-buttons button a {
+            color: #072645;
+            text-decoration: none;
+            font-family: 'Chalkduster';
+        }
+    
+        .destination-buttons button a:hover {
+            color: hsl(210, 62%, 34%);
+        }  
+        
+       
+      
+    }
+    
+    @media only screen and (min-width: 1082px) {
+        #skip:focus {
+            top: 10px; 
+            left: 10px; 
+          visibility: visible;
+        }
+
+        #myBtn {
+            display: block; 
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+    .destination-buttons {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .destination-buttons button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        background-color: #b387cf;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .destination-buttons button a {
+        color: #072645;
+        text-decoration: none;
+        font-family: 'Chalkduster';
+    }
+
+    .destination-buttons button a:hover {
+        color: hsl(210, 62%, 34%);
+    }
+    
+    p {
+    line-height: 1.8;
+    grid-column: 1 / -1;
+    }
+    .largeimages{
+        width:500px;
+        height:350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+    justify-content: center;
+    }
+    img {
+        padding: 10px;
+        border-radius: 30px;
+        height: auto;
+        width: 200px; 
+        margin: 10px;
+    
+    }
+
+
+img:hover {
+    border-color: #af4c95; /* Change border color on hover */
+    margin: 15px; /* Change margin on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
+}
+
+    .gallery {
+    display: block;
+    align-items: center;
+    text-align: center;
+    }
+    
+    
+    .largeimages {
+    justify-content: center;
+    gap: 20px;
+    }
+    .thumbnail {
+    width: 400px;
+    }
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    }
+    
+    
+    .grid-container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    }
+
+    .nav-icon {
+        position: absolute;
+        display: block;
+        top: 5px; /* Adjust top position as needed */
+        right: 10px; /* Adjust right position as needed */
+        overflow: hidden;
+   
+    }
+    
+    .nav-icon img {
+        width: 30px; /* Adjust the size of the icon as needed */
+        height: 30px;
+        border-radius: 50%; /* Make it circular */
+        border: 2px solid #fff; /* Add a border if desired */
+   
+        
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        img[src$=".gif"] {
+            display: none; 
+        }
+        .large-images img {
+            animation: none; 
+        }
+    }
+
+    .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+          }
+          
+          .overlay img {
+         
+            width: 800px;
+            height:700px;
+            object-fit: contain;
+            border: 5px solid #5b5189;
+            border-radius: 30px;
+          }
+
+          #randomFactButton {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #b387cf;
+            color: #072645;
+            font-family: 'Chalkduster';
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+          }
+          
+          #randomFactContainer {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2368a7;
+            text-align: center;
+            font-family: 'Chalkduster';
+            margin: 20px;
+          }
+
+         
+    
+    
+    
+
+    }
+    
+    
+    
+    
+                        
+    
+    
+    
+    
